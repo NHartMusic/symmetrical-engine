@@ -6,12 +6,16 @@ import { unregister } from './core'
 //styles
 import { GlobalStyles, theme } from './styles'
 import { ThemeProvider } from 'styled-components'
+//components
+import { Content, Title } from './components'
 
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <GlobalStyles />
-    <div>Hello World</div>
+    <Content>
+      <Title>Hello World</Title>
+    </Content>
   </ThemeProvider>, 
   document.getElementById('root')
 )
