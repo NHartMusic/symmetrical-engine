@@ -1,5 +1,6 @@
 
 import { FC } from 'react'
+import { Container } from './styles'
 
 interface BlockProps {
     colIndex: number
@@ -8,10 +9,7 @@ interface BlockProps {
 
 const Block: FC<BlockProps> = ({ colIndex, rowIndex }) => {
     return(
-        <div className="block">
-           | {rowIndex} 
-           {colIndex} |
-        </div>
+        <Container className="block" id={`block-${rowIndex}-${colIndex}`} />
     )
 }
 
